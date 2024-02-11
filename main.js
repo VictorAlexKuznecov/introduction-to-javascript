@@ -92,3 +92,33 @@ number2 = number1 + number2;
 number1 = number2 - number1;
 number2 -= number1;
 console.log(`number1: ${number1}, number2: ${number2}`);
+
+// Advanced level #2
+// В данном послании скрыт шифр! Чтобы его разгадать нам нужно соединить все
+// вторые символы слов!
+// Создайте переменную cipher и поместите туда необходимые символы
+
+// version 1
+let codeWord1 = "обернись";
+let codeWord2 = "неужели";
+let codeWord3 = "огурцы";
+let codeWord4 = "липкие";
+let codeWord5 = "?!";
+let cipher =
+  "" +
+  codeWord1.charAt(1) +
+  codeWord2.charAt(1) +
+  codeWord3.charAt(1) +
+  codeWord4.charAt(1) +
+  codeWord5.charAt(1);
+console.log(cipher);
+
+// alternative 1
+
+function connectSecondCharacters() {
+  const array = ["обернись", "неужели", "огурцы", "липкие", "?!"];
+  let cipher = "";
+  array.forEach((item) => (cipher += item[1]));
+  return cipher;
+}
+console.log(connectSecondCharacters());
