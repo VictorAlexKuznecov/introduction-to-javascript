@@ -35,3 +35,25 @@ let a = 1;
 let b = 2;
 let c = "белых медведей";
 console.log(a + (b + c));
+
+// Task 5
+// Создайте переменные и поместите в них нижеприведенные слова. Затем
+// создайте еще одну переменную lengthWords и посчитайте в ней длину всех слов
+// из списка.
+
+// version 1
+let word1 = "доступ";
+let word2 = "морпех";
+let word3 = "наледь";
+let word4 = "попрек";
+let word5 = "рубило";
+let lengthWords =
+  word1.length + word2.length + word3.length + word4.length + word5.length;
+console.log(lengthWords);
+
+// alternative
+function countsTheLengthWords() {
+  const lengthWords = ["доступ", "морпех", "наледь", "попрек", "рубило"];
+  return lengthWords.reduce((acc, item) => (acc += item.length), 0);
+}
+console.log(countsTheLengthWords());
