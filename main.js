@@ -82,3 +82,13 @@ if (loginName !== null && userAge !== null) {
 } else {
   console.log(`Пользователь решил не указывать имя и возраст`);
 }
+
+// Advanced level #1
+// Поменяйте значение переменных местами не создавая дополнительной
+// переменной;
+let number1 = 4;
+let number2 = 3;
+number2 = number1 + number2;
+number1 = number2 - number1;
+number2 -= number1;
+console.log(`number1: ${number1}, number2: ${number2}`);
