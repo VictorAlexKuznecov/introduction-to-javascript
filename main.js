@@ -57,3 +57,17 @@ function countsTheLengthWords() {
   return lengthWords.reduce((acc, item) => (acc += item.length), 0);
 }
 console.log(countsTheLengthWords());
+
+// Task 6
+// Создать 3 переменные разных тип// в и вывести в консоль для каждой из них
+// строку следующего вида: `Variable: %variable name% have type: %type variable%`;
+
+function returnsVariableType() {
+  let number = 42;
+  let string = "world";
+  let bool = true;
+  console.log(`Variable: ${number} have type: ${typeof number}`);
+  console.log(`Variable: ${string} have type: ${typeof string}`);
+  console.log(`Variable: ${bool} have type: ${typeof bool}`);
+}
+returnsVariableType();
