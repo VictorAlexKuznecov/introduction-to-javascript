@@ -71,3 +71,14 @@ function returnsVariableType() {
   console.log(`Variable: ${bool} have type: ${typeof bool}`);
 }
 returnsVariableType();
+
+// Task 7
+// Запросить у пользователя имя и возраст и вывести их в консоль.
+
+let loginName = prompt("Как Вас зовут?");
+let userAge = prompt("Сколько Вам лет");
+if (loginName !== null && userAge !== null) {
+  console.log(`Имя: ${loginName}, возраст ${userAge}`);
+} else {
+  console.log(`Пользователь решил не указывать имя и возраст`);
+}
