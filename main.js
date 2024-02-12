@@ -8,6 +8,17 @@ let y = 58;
 let z = 42;
 console.log(x + y + z);
 
+// Task 2
+// Посчитайте ваш возраст в секундах и поместите результат в
+// переменную myAgeInSeconds;
+
+const SECONDS_COUNT = 60;
+const MINUTE_COUNT = 60;
+const HOUR_COUNT = 24;
+const DAYS_IN_YEAR = 365;
+myAgeInSeconds = 33 * DAYS_IN_YEAR * HOUR_COUNT * MINUTE_COUNT * SECONDS_COUNT;
+console.log(myAgeInSeconds);
+
 // Task 3
 // description:
 // Создайте две переменные. Поместите в них переменную count и превратите в
