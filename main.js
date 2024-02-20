@@ -77,9 +77,9 @@ function returnsVariableType() {
   let number = 42;
   let string = "world";
   let bool = true;
-  console.log(`Variable: ${number} have type: ${typeof number}`);
-  console.log(`Variable: ${string} have type: ${typeof string}`);
-  console.log(`Variable: ${bool} have type: ${typeof bool}`);
+  console.log(`Variable: number have type: ${typeof number}`);
+  console.log(`Variable: string have type: ${typeof string}`);
+  console.log(`Variable: bool have type: ${typeof bool}`);
 }
 returnsVariableType();
 
