@@ -25,3 +25,20 @@ console.log(findMax(15, 20));
 for (let i = 1; i <= 20; i++) {
   if (i % 3 === 0) console.log(i);
 }
+
+// Задача 4.
+// Нам надо идти на работу, но нужно проверить все ли мы взяли или нет? Нам точно нужны
+// ключи документы и ручка, но из еды нам надо яблоко или апельсин. Для решения этой задачи
+// нам помогут логические операторы || && .
+let key = true;
+let documents = true;
+let pen = true;
+let apple = false;
+let orange = true;
+let shouldGoToWork;
+if (key && documents && pen && (apple || orange)) {
+  shouldGoToWork = "Все взяли";
+} else {
+  shouldGoToWork = "Забыли";
+}
+console.log(shouldGoToWork);
