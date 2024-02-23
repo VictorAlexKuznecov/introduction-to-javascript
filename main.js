@@ -1,4 +1,4 @@
-// Задача 1.
+/* // Задача 1.
 // Создайте переменные и присвойте им значения.
 let str = "true";
 let bool = false;
@@ -132,4 +132,21 @@ function transformName() {
     .join(" ");
   alert(`Привет, ${correctName}!`);
 }
-transformName();
+transformName(); */
+// Задача 2.
+// Написать программу, которая выполняет следующие операции:
+// 1. Запрашивает у пользователя число.
+// 2. Последовательно задает вопрос: сколько отнять / прибавить / умножить / разделить от
+// предыдущего результата?
+// 3. По окончании вывести пользователю alert , содержащий формулу и результат например:
+// ((((6 - 10) + 5) * 20) / 2 = 110)
+
+let userNumber = +prompt("Введите число");
+let toSubtract = +prompt("Cколько отнять?");
+let toAdd = +prompt("Cколько прибавить?");
+let toMultiply = +prompt("Cколько умножить?");
+let toDivide = +prompt("Cколько разделить от предыдущего результата?");
+let result = ((userNumber - toSubtract + toAdd) * toMultiply) / toDivide;
+alert(
+  `((${userNumber} - ${toSubtract} + ${toAdd}) * ${toMultiply}) / ${toDivide} Ваш результат:${result}`
+);
