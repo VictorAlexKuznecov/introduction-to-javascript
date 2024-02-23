@@ -1,4 +1,4 @@
-// Задача 1.
+/* // Задача 1.
 // Создайте переменные и присвойте им значения.
 let str = "true";
 let bool = false;
@@ -150,7 +150,7 @@ let result = ((userNumber - toSubtract + toAdd) * toMultiply) / toDivide;
 alert(
   `((${userNumber} - ${toSubtract} + ${toAdd}) * ${toMultiply}) / ${toDivide} Ваш результат: ${result}`
 );
-
+ */
 // Задача 3.
 // Написать программу, которая будет выводить в консоль лесенку.
 // #
@@ -161,8 +161,8 @@ alert(
 // ######
 // Не забудьте воспользоваться циклами.
 let ladderLength = +prompt("Введите длину лесенки");
-let str = "";
+let text = "";
 for (let i = 0; i < ladderLength; i++) {
-  str += "#";
-  console.log(str);
+  text += "#";
+  console.log(text);
 }
