@@ -1,4 +1,4 @@
-// Задача 1.
+/* // Задача 1.
 // Создайте переменные и присвойте им значения.
 let str = "true";
 let bool = false;
@@ -42,3 +42,37 @@ if (key && documents && pen && (apple || orange)) {
   shouldGoToWork = "Забыли";
 }
 console.log(shouldGoToWork);
+ */
+// Задача 5.
+// Запросить у пользователя число:
+// 1. Если число делится без остатка на 5 выводим сообщение Fiz
+// 2. Если число делится без остатка на 3 выводим сообшение Buz
+// 3. Если число делится без остатка и на 3 и на 5 выводим сообшение FizBuz
+
+let userValue = prompt("Введите число");
+let str = "";
+
+/* if (+userValue % 3 === 0 && +userValue % 5 === 0) {
+  console.log("FizBuz");
+} else if (+userValue % 3 === 0) {
+  console.log("Buz");
+} else if (+userValue % 5 === 0) {
+  console.log("Fiz");
+} */
+/* function isValue(value) {
+  if (value % 5 === 0) {
+    str += "Fiz";
+  }
+  if (value % 3 === 0) {
+    str += "Buz";
+  }
+  return str;
+}
+console.log(isValue(userValue)); */
+if (userValue % 5 === 0) {
+  str += "Fiz";
+}
+if (userValue % 3 === 0) {
+  str += "Buz";
+}
+console.log(str);
