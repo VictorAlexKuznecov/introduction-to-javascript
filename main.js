@@ -42,7 +42,7 @@ if (key && documents && pen && (apple || orange)) {
   shouldGoToWork = "Забыли";
 }
 console.log(shouldGoToWork);
- */
+
 // Задача 5.
 // Запросить у пользователя число:
 // 1. Если число делится без остатка на 5 выводим сообщение Fiz
@@ -50,29 +50,41 @@ console.log(shouldGoToWork);
 // 3. Если число делится без остатка и на 3 и на 5 выводим сообшение FizBuz
 
 let userValue = prompt("Введите число");
-let str = "";
+let newStr = "";
 
-/* if (+userValue % 3 === 0 && +userValue % 5 === 0) {
+// option 1
+if (+userValue % 3 === 0 && +userValue % 5 === 0) {
   console.log("FizBuz");
 } else if (+userValue % 3 === 0) {
   console.log("Buz");
 } else if (+userValue % 5 === 0) {
   console.log("Fiz");
-} */
-/* function isValue(value) {
-  if (value % 5 === 0) {
-    str += "Fiz";
-  }
-  if (value % 3 === 0) {
-    str += "Buz";
-  }
-  return str;
 }
-console.log(isValue(userValue)); */
+
+// alternative
 if (userValue % 5 === 0) {
-  str += "Fiz";
+  newStr += "Fiz";
 }
 if (userValue % 3 === 0) {
-  str += "Buz";
+  newStr += "Buz";
 }
-console.log(str);
+console.log(newStr);
+ */
+// Задача 6.
+// Написать программу, которая выполняет следующие операции:
+// Запрашивает у пользователя возраст, если он больше 18, то выводит сообщение - Попей
+// пивка .
+// Если меньше, то выводит сообщение - Пей колу .
+// Добавить условие, что если возраст от 16-18, выводим сообщение - Можешь выкурить
+// сигаретку, только маме не говори
+
+let userAge = prompt("Склолько Вам лет?");
+if (userAge >= 16 && userAge < 18) {
+  alert("Можешь выкурить сигаретку, только маме не говори");
+}
+if (userAge >= 18) {
+  alert("Попей пивка");
+}
+if (userAge < 18) {
+  alert("Пей колу");
+}
