@@ -1,4 +1,4 @@
-/* // Задача 1.
+// Задача 1.
 // Создайте переменные и присвойте им значения.
 let str = "true";
 let bool = false;
@@ -132,7 +132,7 @@ function transformName() {
     .join(" ");
   alert(`Привет, ${correctName}!`);
 }
-transformName(); */
+transformName();
 // Задача 2.
 // Написать программу, которая выполняет следующие операции:
 // 1. Запрашивает у пользователя число.
@@ -148,5 +148,21 @@ let toMultiply = +prompt("Cколько умножить?");
 let toDivide = +prompt("Cколько разделить от предыдущего результата?");
 let result = ((userNumber - toSubtract + toAdd) * toMultiply) / toDivide;
 alert(
-  `((${userNumber} - ${toSubtract} + ${toAdd}) * ${toMultiply}) / ${toDivide} Ваш результат:${result}`
+  `((${userNumber} - ${toSubtract} + ${toAdd}) * ${toMultiply}) / ${toDivide} Ваш результат: ${result}`
 );
+
+// Задача 3.
+// Написать программу, которая будет выводить в консоль лесенку.
+// #
+// ##
+// ###
+// ####
+// #####
+// ######
+// Не забудьте воспользоваться циклами.
+let ladderLength = +prompt("Введите длину лесенки");
+let str = "";
+for (let i = 0; i < ladderLength; i++) {
+  str += "#";
+  console.log(str);
+}
