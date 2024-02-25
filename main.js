@@ -64,9 +64,45 @@ trimString(userStr, startNumber, endNumber);
 Написать функцию getSumNumbers . Она будет принимать число и вычислять
 сумму цифр, из которых состоит число. Для 2021 это будет 5. */
 
-const getSumNumbers = (num) =>
+/* const getSumNumbers = (num) =>
   num
     .toString()
     .split("")
     .reduce((acc, item) => acc + Number(item), 0);
 console.log(getSumNumbers(2023));
+
+ */
+/* Задача 5.
+Написать функцию getSum , которая принимает два целых числа a и b, они могут
+быть положительными или отрицательными, найти сумму всех чисел между
+ними, включая их, и вернуть ее. Если два числа равны, верните a или b. */
+// Option 1
+function getSum(a, b) {
+  let count = 0;
+  if (a < b) {
+    for (let i = a; i <= b; i++) {
+      count += i;
+    }
+  } else {
+    for (let i = b; i <= a; i++) {
+      count += i;
+    }
+  }
+  console.log(count);
+}
+// alternative
+function getSum(a, b) {
+  const calculateArithmeticSum = (value1, value2) =>
+    new Array(value1 - value2 + 1)
+      .fill(value2)
+      .reduce((acc, item, index) => acc + item + index, 0);
+  return a > b ? calculateArithmeticSum(a, b) : calculateArithmeticSum(b, a);
+}
+console.log(getSum(3, 1)); // 3 + 2 + 1 = 6
+
+console.log(getSum(1, 0)); // == 1  1 + 0 = 1
+console.log(getSum(1, 2)); // == 3  1 + 2 = 3
+console.log(getSum(0, 1)); // == 1  0 + 1 = 1
+console.log(getSum(1, 1)); // == 1  1 Since both are same
+console.log(getSum(-1, 0)); // == -1  -1 + 0 = -1
+console.log(getSum(-1, 2)); // = 2  -1 + 0 + 1 + 2 = 2
