@@ -45,7 +45,7 @@ alert(`Переплата по кредиту будет ${overpayment(creditSum
 значение «от»
 значение «по»
 После вызова функция должна вернуть переданную строку, обрезанную по
-значениям «от» и «по». */
+значениям «от» и «по».
 
 const userStr = prompt("Введите слово и мы его укоротим)");
 const startNumber = Number(prompt("Введите значение «от»"));
@@ -59,3 +59,14 @@ const trimString = (str, start, end) => {
   }
 };
 trimString(userStr, startNumber, endNumber);
+ */
+/* Задача 4.
+Написать функцию getSumNumbers . Она будет принимать число и вычислять
+сумму цифр, из которых состоит число. Для 2021 это будет 5. */
+
+const getSumNumbers = (num) =>
+  num
+    .toString()
+    .split("")
+    .reduce((acc, item) => acc + Number(item), 0);
+console.log(getSumNumbers(2023));
