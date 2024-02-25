@@ -115,9 +115,25 @@ console.log(getSum(-1, 2)); // = 2  -1 + 0 + 1 + 2 = 2
 функцию boo которая выводит в консоль свое имя
 Если переданное булевое значение true , то запускаем функцию foo, иначе boo */
 
-const foo = () => console.log("foo");
+/* const foo = () => console.log("foo");
 const boo = () => console.log("boo");
 const fooBoo = (isBoolean, nameFoo, nameBoo) =>
   isBoolean ? nameFoo() : nameBoo();
 fooBoo(true, foo, boo);
 fooBoo(false, foo, boo);
+ */
+// Advanced level
+/* Задача 1.
+Реализуйте функцию, который принимает 3 целочисленных значения a, b, c.
+Функция должна возвращать true , если треугольник можно построить со
+сторонами заданной длины, и false в любом другом случае */
+function isValidTriangle(a, b, c) {
+  const arr = [a, b, c].sort((a, b) => a - b);
+  if ((a > 0) & (b > 0) & (c > 0)) {
+    return arr[0] + arr[1] > arr[2];
+  } else {
+    return false;
+  }
+}
+console.log(isValidTriangle(3, 4, 5));
+console.log(isValidTriangle(1, 1, 5));
