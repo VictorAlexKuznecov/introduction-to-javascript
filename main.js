@@ -6,7 +6,7 @@ let userValue = Number(
   prompt("Вычислит сумму чисел от 0 до указанного параметра. Введите число")
 );
 // Option 1
-/* function getSum(num) {
+ function getSum(num) {
   let counter = 0;
   for (let i = 1; i <= num; i++) {
     counter += i;
@@ -14,7 +14,7 @@ let userValue = Number(
   alert(counter);
 }
 getSum(userValue);
- 
+
 // alternative
 function getSum(num) {
   if (num <= 1) {
@@ -23,25 +23,39 @@ function getSum(num) {
   return num + getSum(num - 1);
 }
 console.log(getSum(userValue));
- */
+
 /* Задача 2.
 Напишите функцию, она в качестве аргумента принимает в себя сумму кредита,
 который хочет получить клиент и верните результат переплаты по кредиту:
 процентная ставка в год — 17%,
 количество лет — 5.
 Мы пишем функцию для хорошего банка, поэтому сумма кредита не
-увеличивается. */
+увеличивается. 
 
-/* let creditSum = Number(prompt("Введите сумму которая Вам необходима"));
+let creditSum = Number(prompt("Введите сумму которая Вам необходима"));
 const ANNUAL_INTEREST_RATE = 17;
 const YEARS_COUNT = 5;
 const overpayment = (sum) => ((sum * ANNUAL_INTEREST_RATE) / 100) * YEARS_COUNT;
 alert(`Переплата по кредиту будет ${overpayment(creditSum)} рублей`);
  */
-/* function names() {
-  alert("Victor");
-}
-names();
- */
-const namVictor = () => "Victor";
-alert(namVictor());
+/* Задача 3.
+Написать функцию trimString , которая в качестве аргумента принимает три
+параметра:
+строку
+значение «от»
+значение «по»
+После вызова функция должна вернуть переданную строку, обрезанную по
+значениям «от» и «по». */
+
+const userStr = prompt("Введите слово и мы его укоротим)");
+const startNumber = Number(prompt("Введите значение «от»"));
+const endNumber = Number(prompt("Введите значение «по»"));
+const trimString = (str, start, end) => {
+  let newSnr = str.slice(start, end);
+  if (start > str.length) {
+    alert("Ваше число больше длины строки, введите другое число");
+  } else {
+    alert(`Ваша новая строка: ${newSnr}`);
+  }
+};
+trimString(userStr, startNumber, endNumber);
