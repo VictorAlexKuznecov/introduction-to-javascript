@@ -77,7 +77,7 @@ console.log(getSumNumbers(2023));
 быть положительными или отрицательными, найти сумму всех чисел между
 ними, включая их, и вернуть ее. Если два числа равны, верните a или b. */
 // Option 1
-function getSum(a, b) {
+/* function getSum(a, b) {
   let count = 0;
   if (a < b) {
     for (let i = a; i <= b; i++) {
@@ -106,3 +106,18 @@ console.log(getSum(0, 1)); // == 1  0 + 1 = 1
 console.log(getSum(1, 1)); // == 1  1 Since both are same
 console.log(getSum(-1, 0)); // == -1  -1 + 0 = -1
 console.log(getSum(-1, 2)); // = 2  -1 + 0 + 1 + 2 = 2
+ */
+/* Задача 6.
+Напишите функцию fooBoo которая принимает в качестве аргумента три
+параметра:
+булевое значение
+функцию foo которая выводит в консоль свое имя
+функцию boo которая выводит в консоль свое имя
+Если переданное булевое значение true , то запускаем функцию foo, иначе boo */
+
+const foo = () => console.log("foo");
+const boo = () => console.log("boo");
+const fooBoo = (isBoolean, nameFoo, nameBoo) =>
+  isBoolean ? nameFoo() : nameBoo();
+fooBoo(true, foo, boo);
+fooBoo(false, foo, boo);
