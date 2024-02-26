@@ -127,7 +127,7 @@ fooBoo(false, foo, boo);
 Реализуйте функцию, который принимает 3 целочисленных значения a, b, c.
 Функция должна возвращать true , если треугольник можно построить со
 сторонами заданной длины, и false в любом другом случае */
-function isValidTriangle(a, b, c) {
+/* function isValidTriangle(a, b, c) {
   const arr = [a, b, c].sort((a, b) => a - b);
   if ((a > 0) & (b > 0) & (c > 0)) {
     return arr[0] + arr[1] > arr[2];
@@ -137,7 +137,7 @@ function isValidTriangle(a, b, c) {
 }
 console.log(isValidTriangle(3, 4, 5));
 console.log(isValidTriangle(1, 1, 5));
-
+ */
 /* Задача 2.
 Ваша задача - разбить плитку шоколада заданного размера n x m на
 маленькие квадраты. Каждый квадрат имеет размер 1x1 и не может быть
@@ -150,11 +150,10 @@ console.log(isValidTriangle(1, 1, 5));
 надломы не требуются, если у нас нет шоколада для разделения). Ввод всегда
 будет неотрицательным целым числом.
  */
-function minBreaksCount(n, m) {
+/* function minBreaksCount(n, m) {
   return n > 0 && m > 0 ? (n - 1) * m : 0;
 }
-console.log(minBreaksCount(5, -5));
-
+console.log(minBreaksCount(5, 1)); */
 /* Задача 3.
 Напишите программу для вычисления общей стоимости покупки телефонов.
 Вы будете продолжать покупать телефоны (подсказка: циклы!), пока у вас не
@@ -174,11 +173,37 @@ console.log(minBreaksCount(5, -5));
 функции prompt(...) . Вы можете, например, запросить у пользователя баланс
 банковского счета. Развлекайтесь и будьте изобретательны! */
 
-let balance = Number(prompt("Введите сумму баланса Вашего банковского счета"));
 const PHONE_PRICE = 1000;
-const ACCESSORY_PRICE = 50;
-const total = PHONE_PRICE + ACCESSORY_PRICE;
-counter = 0;
-for (let i = 0; i <= balance; i += total) {
-  console.log((counter += i));
-}
+ACCESSORY_PRICE = 50;
+total = PHONE_PRICE + ACCESSORY_PRICE;
+TAX_RATE = 0.13;
+let userBalance = Number(
+  prompt("Введите сумму баланса Вашего банковского счета")
+);
+
+// сумма телефонов и аксессуаров исходя из баланса
+const totalSumPhoneAndAccessory = (sum, price) => {
+  let count = 0;
+  for (let i = 0; i <= sum; i += price) {
+    count = i;
+  }
+  return count;
+};
+const resul = totalSumPhoneAndAccessory(userBalance, total);
+
+// сумма покупки с учетом налога
+const totalCost = function (totalPrice, tax) {
+  alert(
+    `Cумма покупки с учетом налога ${(totalPrice + totalPrice * tax).toFixed(
+      2
+    )} руб`
+  );
+  return (totalPrice + totalPrice * tax).toFixed(2);
+};
+const canPurchase = (balance, cost) =>
+  balance >= cost
+    ? alert(`баланс достаточен для покупки`)
+    : alert(
+        `баланс недостаточен для покупки. Возможно, стоит купить чуть меньше телефонов и аксессуаров к ним`
+      );
+canPurchase(userBalance, totalCost(resul, TAX_RATE));
