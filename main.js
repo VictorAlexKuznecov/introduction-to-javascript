@@ -25,4 +25,18 @@ const countries = {
     return false;
   },
 };
-console.log(countries.isKeys("country"));
+/* console.log(countries.isKeys("country")); */
+
+/* Задача 3.
+Дан объект:
+C помощью цикла for..in вывести в консоль сначала все ключи, потом
+значения ключей объект. */
+
+const student = {
+  name: "John",
+  age: 19,
+  isHappy: true,
+};
+for (key in student) {
+  console.log(`ключ: ${key}, значение: ${student[key]}`);
+}
