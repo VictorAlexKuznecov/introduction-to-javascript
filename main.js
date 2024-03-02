@@ -74,7 +74,7 @@ alexandra: 199
 Вычислите среднюю зарплату сотрудников и результат поместите в
 соответствующую переменную */
 
-let salaries = {
+/* let salaries = {
   andrey: 500,
   sveta: 413,
   anton: 987,
@@ -95,4 +95,38 @@ console.log(averageEmployeeSalary);
 const averageEmployeeSalary =
   Object.values(salaries).reduce((acc, item) => acc + item, 0) /
   Object.values(salaries).length;
-console.log(averageEmployeeSalary);
+console.log(averageEmployeeSalary); */
+
+/* Задача 6.
+Создать валидатор, запросить у пользователя логин и пароль для регистрации.
+Затем данные записать в объект.
+Потом попросить пользователя подтвердить данные. Если верно введен логин
+и пароль, вывести сообщение Добро пожаловать */
+
+let userLogin = prompt("Введите логин для регистрации");
+let userPassword = prompt("Введите пароль");
+
+const userCredentials = {};
+const checkLoginAndPassword = function (login, password) {
+  if (!(!login || !password)) {
+    userCredentials.login = userLogin;
+    userCredentials.password = userPassword;
+    validateCredentials(userCredentials);
+  } else {
+    alert("Некоректно введены данные, попробуйте ещё раз");
+  }
+};
+checkLoginAndPassword(userLogin, userPassword);
+
+function validateCredentials(loginAndPassword) {
+  let confirmLogin = prompt("Введите логин для подтверждения");
+  let confirmPassword = prompt("Введите пароль для подтверждения");
+  if (
+    loginAndPassword.login === confirmLogin &&
+    loginAndPassword.password === confirmPassword
+  ) {
+    alert("Добро пожаловать");
+  } else {
+    alert("Логин или пароль введен не верно");
+  }
+}
