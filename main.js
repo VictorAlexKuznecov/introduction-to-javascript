@@ -52,7 +52,7 @@ const colors = {
   }
 Вывести в консоль слово красный и синий
  */
-const colors = {
+/* const colors = {
   "ru pum pu ru rum": {
     red: "красный",
     green: "зеленый",
@@ -60,4 +60,39 @@ const colors = {
   },
 };
 console.log(colors["ru pum pu ru rum"].red);
-console.log(colors["ru pum pu ru rum"]["blue"]);
+console.log(colors["ru pum pu ru rum"]["blue"]); */
+
+/* Задача 5.
+Дан объект:
+let salaries = {
+andrey: 500,
+sveta: 413,
+anton: 987,
+igor: 664,
+alexandra: 199
+}
+Вычислите среднюю зарплату сотрудников и результат поместите в
+соответствующую переменную */
+
+let salaries = {
+  andrey: 500,
+  sveta: 413,
+  anton: 987,
+  igor: 664,
+  alexandra: 199,
+};
+
+let wholeSalary = 0;
+let counter = 0;
+for (let key in salaries) {
+  wholeSalary += salaries[key];
+  counter++;
+}
+let averageEmployeeSalary = wholeSalary / counter;
+console.log(averageEmployeeSalary);
+
+// alternative
+const averageEmployeeSalary =
+  Object.values(salaries).reduce((acc, item) => acc + item, 0) /
+  Object.values(salaries).length;
+console.log(averageEmployeeSalary);
