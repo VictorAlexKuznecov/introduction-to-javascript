@@ -75,8 +75,22 @@ const evenNumbers = [2, 4, 6, 8, 10]
 const oddNumbers = [1, 3, 5, 7, 9]
 Соедините два массива чисел в один.
 В полученном массиве попробуйте найти индекс числа 8 */
-const evenNumbers = [2, 4, 6, 8, 10];
+/* const evenNumbers = [2, 4, 6, 8, 10];
 const oddNumbers = [1, 3, 5, 7, 9];
 const arr = evenNumbers.concat(oddNumbers);
 console.log(arr);
-console.log(arr.indexOf(8));
+console.log(arr.indexOf(8)); */
+
+/* Задача 7.
+Дан массив:
+const binary = [0, 0, 0, 0]
+Наш бинарный массив неполный, в нем явно не хватает единиц.
+Превратите данный массив в строку.
+[0, 0, 0, 0] -> '0101010' */
+
+const binary = [0, 0, 0, 0];
+const arr = [];
+for (let value of binary) {
+  arr.push(value + "1");
+}
+console.log(arr.join(""));
