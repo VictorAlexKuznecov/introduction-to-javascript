@@ -20,7 +20,7 @@ const numbers = [5, 43, 63, 23, 90]
 Удалите все элементы в массиве и выведите в консоль полученный результат.
 Реализуйте решение двумя способами. */
 
-const numbers = [5, 43, 63, 23, 90];
+/* const numbers = [5, 43, 63, 23, 90];
 // version 1
 numbers.length = 0;
 console.log(numbers);
@@ -35,3 +35,24 @@ for (let i = 0; i < arrLength; i++) {
   numbers.pop();
 }
 console.log(numbers);
+ */
+/* Задача 4.
+Дан массив:
+const students = ['Polina', 'Dasha', 'Masha']
+Удалите последний элемент массива, затем вместо него добавьте в массив
+студента Borya .
+Удалите первый элемент массива, затем вместо него добавьте в массив
+студента Andrey .
+Полученный результат не забудьте вывести в консоль */
+
+const students = ["Polina", "Dasha", "Masha"];
+// version 1
+students.pop();
+students.push("Borya");
+students.shift();
+students.unshift("Andrey");
+console.log(students);
+// version 2
+students.splice(students.length - 1, 1, "Borya");
+students.splice(0, 1, "Andrey");
+console.log(students);
