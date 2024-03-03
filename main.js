@@ -44,7 +44,7 @@ const students = ['Polina', 'Dasha', 'Masha']
 Удалите первый элемент массива, затем вместо него добавьте в массив
 студента Andrey .
 Полученный результат не забудьте вывести в консоль */
-
+/* 
 const students = ["Polina", "Dasha", "Masha"];
 // version 1
 students.pop();
@@ -56,3 +56,17 @@ console.log(students);
 students.splice(students.length - 1, 1, "Borya");
 students.splice(0, 1, "Andrey");
 console.log(students);
+ */
+/* Задача 5.
+Дан массив:
+const cats = ['Gachito', 'Tom', 'Batman']
+Выведите в консоль все элементы массива. Сначала через цикл for ,
+затем for..of . */
+
+const cats = ["Gachito", "Tom", "Batman"];
+for (let i = 0; i < cats.length; i++) {
+  console.log(cats[i]);
+}
+for (let value of cats) {
+  console.log(value);
+}
