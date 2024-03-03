@@ -149,7 +149,7 @@ const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4]
 Создайте два массива, в один поместите все положительные числа включая 0,
 в другой все отрицательные. Оба массива затем выведите в консоль. */
 
-const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
+/* const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
 const positiveNumbers = [];
 const negativeNumbers = [];
 for (let value of mixedNumbers) {
@@ -157,4 +157,30 @@ for (let value of mixedNumbers) {
   else negativeNumbers.push(value);
 }
 console.log(positiveNumbers);
-console.log(negativeNumbers);
+console.log(negativeNumbers);*/
+
+/* Задача 4.
+Создать массив длинной не менее 5, из динамически созданных случайных
+чисел. Далее написать алгоритм, который берет все числа из исходного
+массива, возводит их в куб и записывает в новый массив. В конце вывести оба
+массива в консоль. */
+let arr = [];
+let num;
+const generateRandomNumber = () => {
+  for (i = 0; i <= 5; i++) {
+    num = Math.floor(Math.random() * 20);
+    arr.push(num);
+  }
+  return arr;
+};
+const arrayOfRandomNumbers = generateRandomNumber();
+const getCube = (arr) => {
+  const getCubeArray = [];
+  for (let value of arr) {
+    getCubeArray.push(Math.pow(value, 3));
+  }
+  return getCubeArray;
+};
+
+console.log(arrayOfRandomNumbers);
+console.log(getCube(arrayOfRandomNumbers));
