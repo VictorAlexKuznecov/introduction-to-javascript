@@ -88,9 +88,32 @@ const binary = [0, 0, 0, 0]
 Превратите данный массив в строку.
 [0, 0, 0, 0] -> '0101010' */
 
-const binary = [0, 0, 0, 0];
+/* const binary = [0, 0, 0, 0];
 const arr = [];
 for (let value of binary) {
   arr.push(value + "1");
 }
-console.log(arr.join(""));
+console.log(arr.join("")); */
+
+/* Продвинутый уровень
+Для решения задач используйте циклы for или for..of
+Задача 1.
+Реализуйте функцию, которая будет проверять, является ли слово
+палиндромом. */
+// version 1
+function isPalindrome(word) {
+  word = word.toLowerCase();
+  for (let i = 0; i < Math.floor(word.length / 2); i++) {
+    if (word[i] !== word[word.length - 1 - i]) return false;
+  }
+  return true;
+}
+//  version 2
+function isPalindrome(word) {
+  word = word.toLowerCase();
+  return word.split("").reverse().join("") === word;
+}
+console.log(isPalindrome("шалаш"));
+console.log(isPalindrome("Шалаш"));
+console.log(isPalindrome("радар"));
+console.log(isPalindrome("слово"));
