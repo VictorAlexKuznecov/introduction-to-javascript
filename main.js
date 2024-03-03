@@ -3,16 +3,16 @@
 const colors = ['red', 'green', 'blue']
 Выведите в консоль его длину. */
 
-/* const colors = ["red", "green", "blue"];
-console.log(colors.length); */
+const colors = ["red", "green", "blue"];
+console.log(colors.length);
 
 /* Задача 2.
 Дан массив:
 const animals = ['monkey', 'dog', 'cat']
 Выведите в консоль его последний элемент вне зависимости от его длинны. */
 
-/* const animals = ["monkey", "dog", "cat"];
-console.log(animals[animals.length - 1]); */
+const animals = ["monkey", "dog", "cat"];
+console.log(animals[animals.length - 1]);
 
 /* Задача 3.
 Дан массив:
@@ -20,7 +20,7 @@ const numbers = [5, 43, 63, 23, 90]
 Удалите все элементы в массиве и выведите в консоль полученный результат.
 Реализуйте решение двумя способами. */
 
-/* const numbers = [5, 43, 63, 23, 90];
+const numbers = [5, 43, 63, 23, 90];
 // version 1
 numbers.length = 0;
 console.log(numbers);
@@ -35,7 +35,7 @@ for (let i = 0; i < arrLength; i++) {
   numbers.pop();
 }
 console.log(numbers);
- */
+
 /* Задача 4.
 Дан массив:
 const students = ['Polina', 'Dasha', 'Masha']
@@ -44,7 +44,7 @@ const students = ['Polina', 'Dasha', 'Masha']
 Удалите первый элемент массива, затем вместо него добавьте в массив
 студента Andrey .
 Полученный результат не забудьте вывести в консоль */
-/* 
+
 const students = ["Polina", "Dasha", "Masha"];
 // version 1
 students.pop();
@@ -56,30 +56,30 @@ console.log(students);
 students.splice(students.length - 1, 1, "Borya");
 students.splice(0, 1, "Andrey");
 console.log(students);
- */
+
 /* Задача 5.
 Дан массив:
 const cats = ['Gachito', 'Tom', 'Batman']
 Выведите в консоль все элементы массива. Сначала через цикл for ,
 затем for..of . */
 
-/* const cats = ["Gachito", "Tom", "Batman"];
+const cats = ["Gachito", "Tom", "Batman"];
 for (let i = 0; i < cats.length; i++) {
   console.log(cats[i]);
 }
 for (let value of cats) {
   console.log(value);
-} */
+}
 /* Задача 6.
 const evenNumbers = [2, 4, 6, 8, 10]
 const oddNumbers = [1, 3, 5, 7, 9]
 Соедините два массива чисел в один.
 В полученном массиве попробуйте найти индекс числа 8 */
-/* const evenNumbers = [2, 4, 6, 8, 10];
+const evenNumbers = [2, 4, 6, 8, 10];
 const oddNumbers = [1, 3, 5, 7, 9];
 const arr = evenNumbers.concat(oddNumbers);
 console.log(arr);
-console.log(arr.indexOf(8)); */
+console.log(arr.indexOf(8));
 
 /* Задача 7.
 Дан массив:
@@ -88,12 +88,12 @@ const binary = [0, 0, 0, 0]
 Превратите данный массив в строку.
 [0, 0, 0, 0] -> '0101010' */
 
-/* const binary = [0, 0, 0, 0];
+const binary = [0, 0, 0, 0];
 const arr = [];
 for (let value of binary) {
   arr.push(value + "1");
 }
-console.log(arr.join("")); */
+console.log(arr.join(""));
 
 /* Продвинутый уровень
 Для решения задач используйте циклы for или for..of
@@ -101,7 +101,7 @@ console.log(arr.join("")); */
 Реализуйте функцию, которая будет проверять, является ли слово
 палиндромом. */
 // version 1
-/* function isPalindrome(word) {
+function isPalindrome(word) {
   word = word.toLowerCase();
   for (let i = 0; i < Math.floor(word.length / 2); i++) {
     if (word[i] !== word[word.length - 1 - i]) return false;
@@ -116,7 +116,7 @@ function isPalindrome(word) {
 console.log(isPalindrome("шалаш"));
 console.log(isPalindrome("Шалаш"));
 console.log(isPalindrome("радар"));
-console.log(isPalindrome("слово")); */
+console.log(isPalindrome("слово"));
 
 /* Задача 2.
 const matrix = [
@@ -126,7 +126,7 @@ const matrix = [
 [9092, 22, 45, 90000],
 ]
 Выведите в консоль среднее значение чисел в многомерном массиве. */
-/* const matrix = [
+const matrix = [
   [12, 98, 78, 65, 23],
   [54, 76, 98, 43, 65],
   [13, 324, 65, 312],
@@ -141,7 +141,7 @@ for (let value of matrix) {
   }
 }
 const averageOfNumbers = sum / counter;
-console.log(averageOfNumbers); */
+console.log(averageOfNumbers);
 
 /* Задача 3.
 Дан массив:
@@ -149,7 +149,7 @@ const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4]
 Создайте два массива, в один поместите все положительные числа включая 0,
 в другой все отрицательные. Оба массива затем выведите в консоль. */
 
-/* const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
+const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
 const positiveNumbers = [];
 const negativeNumbers = [];
 for (let value of mixedNumbers) {
@@ -157,7 +157,7 @@ for (let value of mixedNumbers) {
   else negativeNumbers.push(value);
 }
 console.log(positiveNumbers);
-console.log(negativeNumbers);*/
+console.log(negativeNumbers);
 
 /* Задача 4.
 Создать массив длинной не менее 5, из динамически созданных случайных
