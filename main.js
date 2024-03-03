@@ -101,7 +101,7 @@ console.log(arr.join("")); */
 Реализуйте функцию, которая будет проверять, является ли слово
 палиндромом. */
 // version 1
-function isPalindrome(word) {
+/* function isPalindrome(word) {
   word = word.toLowerCase();
   for (let i = 0; i < Math.floor(word.length / 2); i++) {
     if (word[i] !== word[word.length - 1 - i]) return false;
@@ -116,4 +116,29 @@ function isPalindrome(word) {
 console.log(isPalindrome("шалаш"));
 console.log(isPalindrome("Шалаш"));
 console.log(isPalindrome("радар"));
-console.log(isPalindrome("слово"));
+console.log(isPalindrome("слово")); */
+
+/* Задача 2.
+const matrix = [
+[12, 98, 78, 65, 23],
+[54, 76, 98, 43, 65],
+[13, 324, 65, 312],
+[9092, 22, 45, 90000],
+]
+Выведите в консоль среднее значение чисел в многомерном массиве. */
+const matrix = [
+  [12, 98, 78, 65, 23],
+  [54, 76, 98, 43, 65],
+  [13, 324, 65, 312],
+  [9092, 22, 45, 90000],
+];
+let sum = 0;
+let counter = 0;
+for (let value of matrix) {
+  for (let i = 0; i < value.length; i++) {
+    sum += value[i];
+    counter++;
+  }
+}
+const averageOfNumbers = sum / counter;
+console.log(averageOfNumbers);
