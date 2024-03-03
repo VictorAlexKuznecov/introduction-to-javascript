@@ -126,7 +126,7 @@ const matrix = [
 [9092, 22, 45, 90000],
 ]
 Выведите в консоль среднее значение чисел в многомерном массиве. */
-const matrix = [
+/* const matrix = [
   [12, 98, 78, 65, 23],
   [54, 76, 98, 43, 65],
   [13, 324, 65, 312],
@@ -141,4 +141,20 @@ for (let value of matrix) {
   }
 }
 const averageOfNumbers = sum / counter;
-console.log(averageOfNumbers);
+console.log(averageOfNumbers); */
+
+/* Задача 3.
+Дан массив:
+const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4]
+Создайте два массива, в один поместите все положительные числа включая 0,
+в другой все отрицательные. Оба массива затем выведите в консоль. */
+
+const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
+const positiveNumbers = [];
+const negativeNumbers = [];
+for (let value of mixedNumbers) {
+  if (value >= 0) positiveNumbers.push(value);
+  else negativeNumbers.push(value);
+}
+console.log(positiveNumbers);
+console.log(negativeNumbers);
