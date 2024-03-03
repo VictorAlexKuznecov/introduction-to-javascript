@@ -63,10 +63,20 @@ const cats = ['Gachito', 'Tom', 'Batman']
 Выведите в консоль все элементы массива. Сначала через цикл for ,
 затем for..of . */
 
-const cats = ["Gachito", "Tom", "Batman"];
+/* const cats = ["Gachito", "Tom", "Batman"];
 for (let i = 0; i < cats.length; i++) {
   console.log(cats[i]);
 }
 for (let value of cats) {
   console.log(value);
-}
+} */
+/* Задача 6.
+const evenNumbers = [2, 4, 6, 8, 10]
+const oddNumbers = [1, 3, 5, 7, 9]
+Соедините два массива чисел в один.
+В полученном массиве попробуйте найти индекс числа 8 */
+const evenNumbers = [2, 4, 6, 8, 10];
+const oddNumbers = [1, 3, 5, 7, 9];
+const arr = evenNumbers.concat(oddNumbers);
+console.log(arr);
+console.log(arr.indexOf(8));
