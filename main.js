@@ -39,7 +39,7 @@ console.log(formatMembers(users)); */
 const numbers = [7, -4, 32, -90, 54, 32, -21]
 Реализуйте решение двумя способами, используя function declaration & arrow
 function */
-const numbers = [7, -4, 32, -90, 54, 32, -21];
+/* const numbers = [7, -4, 32, -90, 54, 32, -21];
 function getPositive(arr) {
   return arr.filter((item) => item > 0);
 }
@@ -47,4 +47,20 @@ console.log(getPositive(numbers));
 
 // arrow function
 const getPositive = (arr) => arr.filter((item) => item > 0);
-console.log(getPositive(numbers));
+console.log(getPositive(numbers)); */
+
+/* Задача 4.
+Используя метод reduce получите сумму всех чисел массива.
+const fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+Реализуйте решение двумя способами, используя function declaration & arrow
+function. */
+const fibonacci = [
+  0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987,
+];
+function getSumNumbers(arr) {
+  return arr.reduce((acc, item) => acc + item, 0);
+}
+console.log(getSumNumbers(fibonacci));
+// arrow function
+const getSumNumbers = (arr) => arr.reduce((acc, item) => acc + item, 0);
+console.log(getSumNumbers(fibonacci));
