@@ -54,7 +54,7 @@ console.log(getPositive(numbers)); */
 const fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
 Реализуйте решение двумя способами, используя function declaration & arrow
 function. */
-const fibonacci = [
+/* const fibonacci = [
   0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987,
 ];
 function getSumNumbers(arr) {
@@ -63,4 +63,18 @@ function getSumNumbers(arr) {
 console.log(getSumNumbers(fibonacci));
 // arrow function
 const getSumNumbers = (arr) => arr.reduce((acc, item) => acc + item, 0);
-console.log(getSumNumbers(fibonacci));
+console.log(getSumNumbers(fibonacci)); */
+
+/* Задача 5.
+Используя метод find найдите в массиве первое четное число.
+const numbers = [5, 9, 13, 24, 54, 10, 13, 99, 1, 5]
+Реализуйте решение двумя способами, используя function declaration & arrow
+function. */
+const numbers = [5, 9, 13, 24, 54, 10, 13, 99, 1, 5];
+function getFirstEvenNumber(arr) {
+  return arr.find((item) => item % 2 === 0);
+}
+console.log(getFirstEvenNumber(numbers));
+// arrow function
+const getFirstEvenNumber = (arr) => arr.find((item) => item % 2 === 0);
+console.log(getFirstEvenNumber(numbers));
