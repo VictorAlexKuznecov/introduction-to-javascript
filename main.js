@@ -22,13 +22,29 @@ getFibonacci(fibonacci);
 const users = ['Darya', 'Masha', 'Denis', 'Vitaliy', 'Polina', 'Anton']
 Реализуйте решение двумя способами, используя function declaration & arrow
 function. */
-const users = ["Darya", "Masha", "Denis", "Vitaliy", "Polina", "Anton"];
+/* const users = ["Darya", "Masha", "Denis", "Vitaliy", "Polina", "Anton"];
 
-/* function formatMembers(arr) {
+function formatMembers(arr) {
   return arr.map((item, index) => `member ${index + 1}: ${item}`);
 }
-console.log(formatMembers(users)); */
+console.log(formatMembers(users));
 // arrow function
 const formatMembers = (arr) =>
   arr.map((item, index) => `member ${index + 1}: ${item}`);
-console.log(formatMembers(users));
+console.log(formatMembers(users)); */
+
+/* Задача 3.
+С помощью метода filter создайте новый массив в котором не будет
+отрицательных чисел.
+const numbers = [7, -4, 32, -90, 54, 32, -21]
+Реализуйте решение двумя способами, используя function declaration & arrow
+function */
+const numbers = [7, -4, 32, -90, 54, 32, -21];
+function getPositive(arr) {
+  return arr.filter((item) => item > 0);
+}
+console.log(getPositive(numbers));
+
+// arrow function
+const getPositive = (arr) => arr.filter((item) => item > 0);
+console.log(getPositive(numbers));
