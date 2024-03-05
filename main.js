@@ -89,7 +89,7 @@ console.log(getFirstEvenNumber(numbers)); */
 Например, строка «This website is for losers LOL!» станет «Ths wbst s fr lsrs LL!».
 Примечание: для этой задачи y не считается гласной */
 
-const vowelsArray = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
+/* const vowelsArray = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
 function removeVowelsString(str) {
   let newStr = "";
   for (let i = 0; i < str.length; i++) {
@@ -108,4 +108,32 @@ console.log(removeVowelsString("This website is for losers LOL!"));
 
 // Alternative option
 const removeVowelsString = (str) => str.replace(/[aeiou]/gi, "");
-console.log(removeVowelsString("This website is for losers LOL!")); // => Ths wbst s fr lsrs LL!
+console.log(removeVowelsString("This website is for losers LOL!")); // => Ths wbst s fr lsrs LL! */
+
+/* Задача 3.
+Нет истории, нет теории
+В приведенных ниже примерах показано, как написать функцию:
+accum('abcd') // -> 'A-Bb-Ccc-Dddd'
+accum('RqaEzty') // -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'
+accum('cwAt') // -> 'C-Ww-Aaa-Tttt'
+Параметр — это строка, которая включает только буквы от a...z и A...Z */
+/* function accum(str) {
+  str = str.toLowerCase();
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    newStr += str[i].toUpperCase() + str[i].repeat(i);
+    if (i !== str.length - 1) newStr += "-";
+  }
+  return newStr; 
+} */
+function accum(str) {
+  str = str.toLowerCase();
+  return str
+    .split("")
+    .map((item, index) => item.toUpperCase() + item.repeat(index) + "-")
+    .join("")
+    .slice(0, -1);
+}
+console.log(accum("abcd")); // -> 'A-Bb-Ccc-Dddd'
+console.log(accum("RqaEzty")); // -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'
+console.log(accum("cwAt")); // -> 'C-Ww-Aaa-Tttt'
