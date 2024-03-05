@@ -70,11 +70,42 @@ console.log(getSumNumbers(fibonacci)); */
 const numbers = [5, 9, 13, 24, 54, 10, 13, 99, 1, 5]
 Реализуйте решение двумя способами, используя function declaration & arrow
 function. */
-const numbers = [5, 9, 13, 24, 54, 10, 13, 99, 1, 5];
+/* const numbers = [5, 9, 13, 24, 54, 10, 13, 99, 1, 5];
 function getFirstEvenNumber(arr) {
   return arr.find((item) => item % 2 === 0);
 }
 console.log(getFirstEvenNumber(numbers));
 // arrow function
 const getFirstEvenNumber = (arr) => arr.find((item) => item % 2 === 0);
-console.log(getFirstEvenNumber(numbers));
+console.log(getFirstEvenNumber(numbers)); */
+
+// Advanced level
+/* Задача 2.
+Тролли атакуют наш раздел с комментариями!!!
+Единственный способ справиться с этой ситуацией - удалить все гласные из
+комментариев троллей, нейтрализуя угрозу.
+Ваша задача - написать функцию, которая принимает строку и возвращает
+новую строку с удаленными гласными.
+Например, строка «This website is for losers LOL!» станет «Ths wbst s fr lsrs LL!».
+Примечание: для этой задачи y не считается гласной */
+
+const vowelsArray = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
+function removeVowelsString(str) {
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let symbol = false;
+    for (let j = 0; j < vowelsArray.length; j++) {
+      if (str[i] === vowelsArray[j]) {
+        symbol = true;
+        break;
+      }
+    }
+    if (!symbol) newStr += str[i];
+  }
+  return newStr;
+}
+console.log(removeVowelsString("This website is for losers LOL!"));
+
+// Alternative option
+const removeVowelsString = (str) => str.replace(/[aeiou]/gi, "");
+console.log(removeVowelsString("This website is for losers LOL!")); // => Ths wbst s fr lsrs LL!
