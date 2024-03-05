@@ -124,16 +124,31 @@ accum('cwAt') // -> 'C-Ww-Aaa-Tttt'
     newStr += str[i].toUpperCase() + str[i].repeat(i);
     if (i !== str.length - 1) newStr += "-";
   }
-  return newStr; 
-} */
+  return newStr;
+} */ /* 
+// Alternative option
 function accum(str) {
   str = str.toLowerCase();
   return str
     .split("")
-    .map((item, index) => item.toUpperCase() + item.repeat(index) + "-")
-    .join("")
-    .slice(0, -1);
+    .map((item, index) => item.toUpperCase() + item.repeat(index))
+    .join("-");
 }
 console.log(accum("abcd")); // -> 'A-Bb-Ccc-Dddd'
 console.log(accum("RqaEzty")); // -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'
-console.log(accum("cwAt")); // -> 'C-Ww-Aaa-Tttt'
+console.log(accum("cwAt")); // -> 'C-Ww-Aaa-Tttt' */
+
+/* Задача 4.
+Самый высокий и самый низкий
+В этом небольшом задании вам дается строка чисел, разделенных пробелами,
+и вы должны возвращать наибольшее и наименьшее число.
+Строка вывода должна состоять из двух чисел, разделенных одним пробелом,
+при этом наибольшее число должно быть первым. */
+function highAndLow(str) {
+  let arr = str.split(" ").sort((a, b) => b - a);
+  return `${arr[0]} ${arr[arr.length - 1]}`;
+}
+
+console.log(highAndLow("1 2 3 4 5")); // return '5 1'
+console.log(highAndLow("1 2 -3 4 5")); // return '5 -3'
+console.log(highAndLow("1 9 3 4 -5")); // return '9 -5'
