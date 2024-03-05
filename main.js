@@ -144,11 +144,38 @@ console.log(accum("cwAt")); // -> 'C-Ww-Aaa-Tttt' */
 и вы должны возвращать наибольшее и наименьшее число.
 Строка вывода должна состоять из двух чисел, разделенных одним пробелом,
 при этом наибольшее число должно быть первым. */
-function highAndLow(str) {
+/* function highAndLow(str) {
   let arr = str.split(" ").sort((a, b) => b - a);
   return `${arr[0]} ${arr[arr.length - 1]}`;
 }
 
 console.log(highAndLow("1 2 3 4 5")); // return '5 1'
 console.log(highAndLow("1 2 -3 4 5")); // return '5 -3'
-console.log(highAndLow("1 9 3 4 -5")); // return '9 -5'
+console.log(highAndLow("1 9 3 4 -5")); // return '9 -5' */
+
+/* Задача 5.
+Изограммы
+Изограмма - это слово, в котором нет повторяющихся букв, последовательных
+или непоследовательных. Реализуйте функцию, которая определяет, является
+ли строка, содержащая только буквы, изограммой. Предположим, что пустая
+строка является изограммой. Регистр букв мы игнорируем. */
+function isIsogram(str) {
+  str = str.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+      if (str[i] === str[j]) return false;
+    }
+  }
+  return true;
+}
+
+// Alternative option
+function isIsogram(str) {
+  str = str.toLowerCase();
+  let set = new Set(str);
+  return set.size === str.length;
+}
+
+console.log(isIsogram("Dermatoglyphics")); //  == true;
+console.log(isIsogram("aba")); //  == false;
+console.log(isIsogram("moOse")); //  == false; // -- ignore letter case
