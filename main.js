@@ -125,7 +125,7 @@ accum('cwAt') // -> 'C-Ww-Aaa-Tttt'
     if (i !== str.length - 1) newStr += "-";
   }
   return newStr;
-} */ /* 
+}
 // Alternative option
 function accum(str) {
   str = str.toLowerCase();
@@ -136,8 +136,8 @@ function accum(str) {
 }
 console.log(accum("abcd")); // -> 'A-Bb-Ccc-Dddd'
 console.log(accum("RqaEzty")); // -> 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'
-console.log(accum("cwAt")); // -> 'C-Ww-Aaa-Tttt' */
-
+console.log(accum("cwAt")); // -> 'C-Ww-Aaa-Tttt'
+ */
 /* Задача 4.
 Самый высокий и самый низкий
 В этом небольшом задании вам дается строка чисел, разделенных пробелами,
@@ -159,7 +159,7 @@ console.log(highAndLow("1 9 3 4 -5")); // return '9 -5' */
 или непоследовательных. Реализуйте функцию, которая определяет, является
 ли строка, содержащая только буквы, изограммой. Предположим, что пустая
 строка является изограммой. Регистр букв мы игнорируем. */
-function isIsogram(str) {
+/* function isIsogram(str) {
   str = str.toLowerCase();
   for (let i = 0; i < str.length; i++) {
     for (let j = i + 1; j < str.length; j++) {
@@ -179,3 +179,37 @@ function isIsogram(str) {
 console.log(isIsogram("Dermatoglyphics")); //  == true;
 console.log(isIsogram("aba")); //  == false;
 console.log(isIsogram("moOse")); //  == false; // -- ignore letter case
+ */
+/* Задача 6.
+Считаем коды символов
+Учитывая строку, превратите каждый символ в его код символа ASCII и
+соедините их вместе, чтобы создать число. Поместите результат в
+переменную total1 .
+Затем замените все числа 7 на число 1 и назовите это число total2 .
+После верните разницу между суммой цифр total1 и total2 .
+'ABC' --> 'A' = 65, 'B' = 66, 'C' = 67 --> 656667 */
+function characterCodes(str) {
+  let total1 = str
+    .split("")
+    .map((item) => item.charCodeAt())
+    .join("");
+  let total2 = total1.replaceAll("7", "1");
+  total1 = total1.split("").reduce((acc, item) => acc + Number(item), 0);
+  total2 = total2.split("").reduce((acc, item) => acc + Number(item), 0);
+  return total1 - total2;
+}
+
+// Alternative
+function characterCodes(str) {
+  return str
+    .split("") // ['A','B','C']
+    .map((item) => item.charCodeAt()) // ['65','66','67']
+    .join("") //"656667"
+    .split("") // ["6", '5', '6', '6', '6', '7']
+    .filter((item) => +item === 7) // [7]
+    .join("") // '7'
+    .replaceAll("7", "6") // '6'
+    .split("") // [6]
+    .reduce((acc, item) => acc + Number(item), 0);
+}
+console.log(characterCodes("ABC"));
