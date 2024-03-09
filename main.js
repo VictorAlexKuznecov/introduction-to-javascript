@@ -188,7 +188,7 @@ console.log(isIsogram("moOse")); //  == false; // -- ignore letter case
 Затем замените все числа 7 на число 1 и назовите это число total2 .
 После верните разницу между суммой цифр total1 и total2 .
 'ABC' --> 'A' = 65, 'B' = 66, 'C' = 67 --> 656667 */
-function characterCodes(str) {
+/* function characterCodes(str) {
   let total1 = str
     .split("")
     .map((item) => item.charCodeAt())
@@ -212,4 +212,45 @@ function characterCodes(str) {
     .split("") // [6]
     .reduce((acc, item) => acc + Number(item), 0);
 }
-console.log(characterCodes("ABC"));
+console.log(characterCodes("ABC")); */
+
+/* Задача 7.
+Дубликаты
+Цель этого упражнения — преобразовать строку в новую строку, где каждый
+символ в новой строке равен ( , если этот символ появляется только один раз в
+исходной строке, или ) , если этот символ встречается более одного раза в
+исходной строке. Игнорируйте использование заглавных букв при определении
+дубликата символа.
+'din' // => '((('
+"recede" // => '()()()'
+'Success' // => ')())())'
+'(( @' // => '))(("' */
+
+/* function getStringChars(str) {
+  str = str.toLowerCase();
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let counter = 0;
+    for (let j = 0; j < str.length; j++) {
+      if (str[i] === str[j]) counter++;
+    }
+    if (counter <= 1) newStr += "(";
+    else newStr += ")";
+  }
+  return newStr;
+}
+ */
+// alternative
+function getStringChars(str) {
+  const arr = str.toLowerCase().split("");
+  let newStr = "";
+  for (let value of arr) {
+    if (arr.indexOf(value) === arr.lastIndexOf(value)) newStr += "(";
+    else newStr += ")";
+  }
+  return newStr;
+}
+console.log(getStringChars("din"));
+console.log(getStringChars("recede"));
+console.log(getStringChars("Success"));
+console.log(getStringChars("(( @"));
